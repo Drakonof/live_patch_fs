@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package livepatch;
+
+message PingRequest {
+	string message = 1;
+}
+
+message PingResponse {
+	string reply = 1;
+}
+
+message StatusRequest {}
+
+message PatchInfo {
+	string name = 1;
+	string state = 2; //"applied", "enabled", "disabled"
+}
+
+message StatusResponse {
+	string hostname = 1;
+	repeated PatchInfo patches = 2;
+}
+
+service LivePatchAgent {
+    rpc Ping (PingRequest) returns (PingResponse);
+    rpc GetStatus (StatusRequest) returns (StatusResponse);
+}
+
