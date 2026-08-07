@@ -29,7 +29,7 @@ help () {
 	echo "TODO: help"
 }
 
-case "${1:h}" in
+case "${1:-h}" in
 	d) docker_build ;;
 	b) build ;;
 	i) install ;;

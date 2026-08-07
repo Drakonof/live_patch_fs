@@ -9,8 +9,17 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update 
 
 RUN apt-get install -y \
-	locales cmake g++ libfuse3-dev libprotobuf-dev protobuf-compiler \
-	libgrpc++-dev grpc++ pkg-config ninja-build vim build-essential \
+	locales \
+	cmake \
+	g++ \
+	libfuse3-dev \
+	libprotobuf-dev \
+	protobuf-compiler \
+	libgrpc++-dev \
+	grpc++ \
+	pkg-config \
+	ninja-build \
+	build-essential \
 	fuse3 \
 	&& rm -rf /var/lib/apt/lists/* 
 

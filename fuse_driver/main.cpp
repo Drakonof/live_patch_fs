@@ -1,5 +1,6 @@
 #include "LivePatchFs.hpp"
 #include <cstring>
+#include <iostream>
 
 static LivePatchFs fs;
 
